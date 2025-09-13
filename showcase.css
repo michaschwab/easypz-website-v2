@@ -1,0 +1,91 @@
+.showcase {
+    /*padding: 0px 0 40px 0;*/
+}
+.content {
+    padding: 0 20px;
+}
+
+
+
+
+pre {
+    font-size: 0.7em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    background: #111;
+    margin: 15px 0 0;
+}
+
+.carousel {
+    margin: 20px 0 0 0;
+}
+
+
+.carousel a {
+    width: 180px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    height: 170px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+@media(max-width: 999px) {
+    .carousel a {
+        width: 165px;
+        height: 155px;
+    }
+}
+.carousel a.active {
+    background: #fff;
+    pointer-events: none;
+    cursor: default;
+    color: #000;
+}
+.carousel a:hover {
+    background: #666;
+}
+.more-demos .fa {
+    font-size: 48px;
+    margin-top: 10px;
+    color: #0a0;
+}
+
+/*
+
+@media(min-width: 1000px) {
+    .carousel div {
+        padding: 20px;
+    }
+
+}
+*/
+
+@media(max-width: 999px) {
+    .forcelayout-wrap-outer {
+        border: 2px inset rgb(238, 238, 238);
+        overflow: hidden;
+    }
+    .forcelayout-wrap-inner {
+        margin-left: -300px;
+
+    }
+    .forcelayout-wrap-inner iframe {
+        border: 0;
+    }
+}
+
+
+
+b, .highlight, .highlight a {
+    color: #d70;
+}
+
+
+.demo-wrapper iframe {
+    border: 0;
+    border-radius: 10px;
+}

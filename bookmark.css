@@ -1,0 +1,41 @@
+.content {
+    padding: 0 20px;
+}
+
+
+@media(min-width:1000px)
+{
+    section header {
+        width: 432px;
+        float: left;
+    }
+}
+
+
+
+@media(min-width:1000px)
+{
+    .website-section-header {
+        width: 1000px;
+    }
+
+    .bookmark-text, .bookmark-video {
+        float: left;
+    }
+    .bookmark-text {
+        width: 42%;
+    }
+    .bookmark-video:after {
+        clear: both;
+        content: "."
+    }
+    .bookmark-video {
+        text-align: right;
+        width: 58%;
+        font-size: 0;
+    }
+}
+
+.content p, .section-content p {
+    text-align: justify;
+}
