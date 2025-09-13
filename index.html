@@ -81,7 +81,7 @@
                         Drag the link into your bookmarks now:
 
                         <b class="highlight">»
-                            <a href='javascript:(function(){var flash = function(el){var bcr=el.getBoundingClientRect(); var div=document.createElement("div"); div.style.position="absolute"; div.style.pointerEvents="none"; div.style.zIndex=10000; div.style.width=bcr.width+"px"; div.style.height=bcr.height+"px"; div.style.left=bcr.left+"px"; div.style.top=bcr.top+"px"; div.style.background="#d70"; div.style.transition="background ease-in-out 150ms"; el.parentElement.appendChild(div); setTimeout(function(){div.style.background="transparent"}, 15);setTimeout(function(){div.parentElement.removeChild(div)}, 200); }; var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ flash(svgs[i]); svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.min.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a>
+                            <a href='javascript:(function(){var flash = function(el){var bcr=el.getBoundingClientRect(); var div=document.createElement("div"); div.style.position="absolute"; div.style.pointerEvents="none"; div.style.zIndex=10000; div.style.width=bcr.width+"px"; div.style.height=bcr.height+"px"; div.style.left=bcr.left+"px"; div.style.top=bcr.top+"px"; div.style.background="#d70"; div.style.transition="background ease-in-out 150ms"; el.parentElement.appendChild(div); setTimeout(function(){div.style.background="transparent"}, 15);setTimeout(function(){div.parentElement.removeChild(div)}, 200); }; var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ flash(svgs[i]); svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://unpkg.com/easypz@latest/easypz.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a>
                             «
                         </b>
                     </p>
@@ -130,26 +130,26 @@
                 <article class="markdown-body entry-content" itemprop="text">
 
                     <p>To make any visualization zoomable on mobile and desktop using EasyPZ, simply include:</p>
-                    <pre class="pc-only"><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
+                    <pre class="pc-only"><code>&lt;script src="https://unpkg.com/easypz@latest/easypz.js"&gt;&lt;/script&gt;
 </code></pre>
                     <pre class="mobile-only"><code>&lt;script
-    src="https://code.easypz.io/easypz.latest.min.js"&gt;
+    src="https://unpkg.com/easypz@latest/easypz.js"&gt;
 &lt;/script&gt;
 </code></pre>
                     <p>If you're using SVG, you can then assign an <code>easypz</code> attribute to the visualization you want to make zoomable.
                         If you want EasyPZ to simply make all elements of your SVG zoomable, set <code>"applyTransformTo": "svg > *"</code>, and EasyPZ will take care of the rest:</p>
 
-                    <iframe class="showcase-code" height="220" src="//jsfiddle.net/michaschwab/6npan023/20/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <iframe class="showcase-demo" height="220" src="//jsfiddle.net/michaschwab/6npan023/20/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-code" height="220" src="//jsfiddle.net/michaschwab/6npan023/24/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-demo" height="220" src="//jsfiddle.net/michaschwab/6npan023/24/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
                     <p>If you want the transformation to only happen on specific elements, you can change the selector:</p>
 
-                    <iframe class="showcase-code" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/7/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <iframe class="showcase-demo" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/7/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-code" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/18/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-demo" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/18/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
-                    <p style="margin-top: 50px;">This works remarkably well, even for more advanced visualizations, including animations.
-                        It works on almost all visualizations in the D3 gallery, see examples below:</p>
+<!--                    <p style="margin-top: 50px;">This works remarkably well, even for more advanced visualizations, including animations.-->
+<!--                        It works on almost all visualizations in the D3 gallery, see examples below:</p>-->
 
 <!--                    <div class="carousel" id="showcase-carousel">-->
 <!--                        <a *ngFor="let demo of demos" (click)="chooseDemo(demo)" [class.active]="activeDemo==demo">-->
@@ -219,8 +219,8 @@
                     <p>Below, there is an example of using EasyPZ in a <b>canvas</b> environment.</p>
 
 
-                    <iframe class="showcase-code" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <iframe class="showcase-demo" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-code" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/24/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-demo" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/24/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
                     <!--We will add more examples and code explanations here in the future. If you have more questions regarding using EasyPZ, please <a href="mailto:easypzjs@gmail.com"><b>reach out</b></a>!-->
 
