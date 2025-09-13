@@ -1,0 +1,116 @@
+.about {
+    padding: 0 0 120px 0;
+}
+.content {
+    padding: 0 20px;
+}
+
+numbervis {
+    background: #fff;
+}
+
+@media(min-width:1000px)
+{
+    section header {
+        width: 432px;
+        float: left;
+    }
+    section numbervis {
+        float: right;
+    }
+}
+
+@media(min-width:1000px)
+{
+    .website-section-header {
+        width: 1000px;
+    }
+}
+
+.content p, .section-content p {
+    text-align: justify;
+}
+
+.people {
+    margin: 0;
+    padding: 0;
+}
+.people li {
+    list-style: none;
+    display: inline-block;
+    /*width: 190px;*/
+    margin-right: 46px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+@media(max-width: 999px) {
+    .people li, .people li a, .people li a div, .people li a div img {
+        width: calc(50% - 20px - 26px - 23px);
+    }
+    .people li a div {
+        height: calc(50% - 20px - 26px - 23px);
+    }
+}
+
+@media(min-width: 1000px) {
+    .people li, .people li a, .people li a div, .people li a div img {
+        width: 188px;
+    }
+    .people li a div {
+        height: 188px;
+    }
+}
+
+.people li a {
+    /*width: 100%;*/
+    height: 100%;
+    text-decoration: none;
+    background: rgba(255,255,255,0.2);
+    display: block;
+    padding: 20px;
+}
+.people li a:hover {
+    text-decoration: none;
+    background: rgba(255,255,255,0.4);
+}
+.profile-icon-wrap {
+    /*height:190px;
+    width: 190px;*/
+    overflow:hidden;
+    margin-bottom: 10px;
+    background: #ccc;
+}
+
+.button {
+    background: #d70;
+    border-radius: 0;
+    text-align: center;
+    border-width: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 5px;
+}
+.button .fa, .button .fa:hover {
+    text-shadow: none;
+}
+
+@media(min-width:1000px)
+{
+    .button {
+        width: 170px;
+    }
+}
+
+@media(max-width:999px)
+{
+    .button {
+        width: 130px;
+    }
+}
+
+.about-buttons {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px 0;
+}

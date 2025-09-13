@@ -193,12 +193,14 @@ nav {
 ul {
     list-style: none;
     display: inline;
-
-    float: right;
     padding-left: 0;
-    margin: 15px 0 0 0;
-    text-align: right;
 }
+.header ul {
+    float: right;
+    text-align: right;
+    margin: 15px 0 0 0;
+}
+
 ul li {
     display: inline;
 }
@@ -223,17 +225,17 @@ nav a {
     transition: padding linear 200ms;
 }
 @media(min-width:1000px) {
-    nav a {
+    nav.header a {
         width: 191px;
         margin-left: 10px;
     }
-    ul {
+    .header ul {
         width: 60%;
     }
-    nav a:hover:before {
+    nav.header a:hover:before {
         content: "» ";
     }
-    nav a:hover:after {
+    nav.header a:hover:after {
         content: " «";
     }
 }

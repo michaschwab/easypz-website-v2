@@ -15,6 +15,7 @@
     <link href="./styles.css" rel="stylesheet" />
     <link href="./bookmark.css" rel="stylesheet" />
     <link href="./showcase.css" rel="stylesheet" />
+    <link href="./about.css" rel="stylesheet" />
 
     <meta property="og:title" content="EasyPZ.js Pan & Zoom" />
     <meta property="og:description" content="Make any web visualization interactive via pan and zoom, for mobile and desktop, using just one line of code!" />
@@ -29,7 +30,7 @@
 <body>
 
 <div class="container">
-    <nav class="container">
+    <nav class="container header">
         <header>
             <h1>EasyPZ.js <span class="small-on-mobile hide-on-tiny">Pan & Zoom</span></h1>
         </header>
@@ -129,22 +130,22 @@
                 <article class="markdown-body entry-content" itemprop="text">
 
                     <p>To make any visualization zoomable on mobile and desktop using EasyPZ, simply include:</p>
-                    <pre *ngIf="width>=1000"><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
+                    <pre class="pc-only"><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
 </code></pre>
-                    <pre *ngIf="width<1000"><code>&lt;script
+                    <pre class="mobile-only"><code>&lt;script
     src="https://code.easypz.io/easypz.latest.min.js"&gt;
 &lt;/script&gt;
 </code></pre>
                     <p>If you're using SVG, you can then assign an <code>easypz</code> attribute to the visualization you want to make zoomable.
                         If you want EasyPZ to simply make all elements of your SVG zoomable, set <code>"applyTransformTo": "svg > *"</code>, and EasyPZ will take care of the rest:</p>
 
-                    <iframe [attr.width]="codeWidth" height="220" src="//jsfiddle.net/michaschwab/6npan023/20/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <iframe [attr.width]="visualWidth" height="220" src="//jsfiddle.net/michaschwab/6npan023/20/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-code" height="220" src="//jsfiddle.net/michaschwab/6npan023/20/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-demo" height="220" src="//jsfiddle.net/michaschwab/6npan023/20/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
                     <p>If you want the transformation to only happen on specific elements, you can change the selector:</p>
 
-                    <iframe [attr.width]="codeWidth" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/7/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <iframe [attr.width]="visualWidth" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/7/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-code" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/7/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-demo" height="190" src="//jsfiddle.net/michaschwab/v0xe4d9d/7/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
                     <p style="margin-top: 50px;">This works remarkably well, even for more advanced visualizations, including animations.
@@ -218,8 +219,8 @@
                     <p>Below, there is an example of using EasyPZ in a <b>canvas</b> environment.</p>
 
 
-                    <iframe [attr.width]="codeWidth" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <iframe [attr.width]="visualWidth" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-code" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    <iframe class="showcase-demo" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
                     <!--We will add more examples and code explanations here in the future. If you have more questions regarding using EasyPZ, please <a href="mailto:easypzjs@gmail.com"><b>reach out</b></a>!-->
 
@@ -229,9 +230,85 @@
             </div>
         </div>
 
-        <library></library>
+<!--        <library></library>-->
 
-        <about></about>
+        <div class="about" #aboutContainer>
+
+
+            <header class="website-section-header">
+                <h2><i class="fa fa-info-circle" aria-hidden="true"></i>
+                    About
+                </h2>
+            </header>
+            <a name="about" id="about"></a>
+
+            <div class="content">
+                <!--<h1>About the Project</h1>-->
+
+                <p>This work was done as a collaboration between the <a href="https://visualization.ccis.northeastern.edu/">InterVis Group</a> at Northeastern University,
+                    and <a href="http://jamestompkin.com">James Tompkin's</a> and <a href="http://jeffhuang.com/">Jeff Huang's</a> groups at Brown University.
+
+                    Please feel free to reach out! We're excited to get people to use EasyPZ in their interactive visualizations, for their research, and more!</p>
+
+                <div class="about-buttons">
+                    <a href="mailto:easypzjs@gmail.com" class="button contact-button"><i class="fa fa-envelope"></i> E-Mail Us!</a>
+                </div>
+                <!--<a href="https://github.com/michaschwab/easypz/wiki" class="button">
+                    <i class="fa fa-info-circle"></i>
+                    <span *ngIf="width<1000">Docs</span>
+                    <span *ngIf="width>=1000">Documentation</span>
+                </a>
+                <a href="https://github.com/michaschwab/easypz" class="button"><i class="fa fa-github"></i> Github</a>-->
+
+                <!--People Involved:-->
+
+                <ul class="people">
+                    <li>
+                        <a href="http://michailschwab.com">
+                            <div class="profile-icon-wrap" >
+                                <img src="https://michailschwab.com/micha-screen.jpg" />
+                            </div>
+                            Michail<br class="mobile-only" /> Schwab
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://jamestompkin.com">
+                            <div class="profile-icon-wrap" >
+                                <img src="assets/20140418_james_tompkin_185px.png"/>
+                            </div>
+                            James<br class="mobile-only" /> Tompkin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://jeffhuang.com">
+                            <div class="profile-icon-wrap" >
+                                <img src="assets/jeff.jpg" style="margin-top: -15px"/>
+                            </div>
+                            Jeff<br class="mobile-only"/> Huang
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.ccis.northeastern.edu/people/michelle-borkin/">
+                            <div class="profile-icon-wrap" >
+                                <img src="https://s44427.pcdn.co/wp-content/uploads/2021/02/Borkin_Michelle_hero-1-Edit1200x800.jpg" />
+                            </div>
+                            Michelle<br class="mobile-only" /> Borkin
+                        </a>
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+
+
+
+            <!--<section class="content">
+                <p>Hello!</p>
+            </section>-->
+
+        </div>
 
     </div>
 
